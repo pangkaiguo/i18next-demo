@@ -1,0 +1,6 @@
+{
+  "国际化 i18next {{0}}{{1}}{{2}}": "Translation i18next {{0}}{{1}}{{2}}",
+  "测试标签 {{img}} {{a}} {{span}}": "Test tags {{img}} {{a}} {{span}}",
+  "检查状态: {{0}}": "Check Status: {{0}}",
+  "健康": "Health"
+}
