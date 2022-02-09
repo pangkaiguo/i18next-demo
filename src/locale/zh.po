@@ -1,0 +1,22 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: i18next-conv\n"
+"mime-version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"POT-Creation-Date: 2022-02-09T06:49:40.130Z\n"
+"PO-Revision-Date: 2022-02-09T06:49:40.130Z\n"
+"Language: zh\n"
+
+msgid "国际化 i18next {{0}}{{1}}{{2}}"
+msgstr "国际化 i18next {{0}}{{1}}{{2}}"
+
+msgid "测试标签 {{img}} {{a}} {{span}}"
+msgstr "测试标签 {{img}} {{a}} {{span}}"
+
+msgid "检查状态: {{0}}"
+msgstr "检查状态: {{0}}"
+
+msgid "健康"
+msgstr "健康"

@@ -7,6 +7,7 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "i18next": "^21.6.7",
+    "i18next-conv": "^11.0.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-i18next": "^11.15.3",
@@ -18,7 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "i18n:json2po": "(i18next-conv -l zh -s ./src/locale/zh.json -t ./src/locale/zh.po) && (i18next-conv -l en -s ./src/locale/en.json -t ./src/locale/en.po)"
   },
   "eslintConfig": {
     "extends": [
