@@ -1,13 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import { Trans, useTranslation } from "react-i18next";
+import { t } from 'i18next';
+import { Trans } from "react-i18next";
 import { initReactI18n } from './locale';
 
 initReactI18n();
 
 function App() {
-  const { t } = useTranslation();
-
   const context = Math.random().toFixed(2);
   const name = "kai guo";
   return (

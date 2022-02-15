@@ -1,5 +1,5 @@
 {
-  "国际化 i18next {{0}}{{1}}{{2}}": "国际化 i18next {{0}}{{1}}{{2}}",
+  "国际化 i18next {{0}}{{1}}{{2}}": "international i18next {{0}}{{1}}{{2}}",
   "检查状态: {{0}}": "检查状态: {{0}}",
   "健康": "健康",
   "My text that can be <b>{{boldPlaceholder}}</b>": "My text that can be <1><0>{{boldPlaceholder}}</0></1>",

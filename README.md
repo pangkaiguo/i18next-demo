@@ -3,7 +3,7 @@
 
 - [A Guide to React Localization with i18next](https://phrase.com/blog/posts/localizing-react-apps-with-i18next)
 
-# Protectice i18n translation in project with the following libraries
+# Practice i18n translation in project with the following libraries
 
 - i18next
 - react-i18next
