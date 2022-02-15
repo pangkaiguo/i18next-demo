@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Trans, useTranslation } from "react-i18next";
-import initReactI18n from './locale';
+import { initReactI18n } from './locale';
 
 initReactI18n();
 

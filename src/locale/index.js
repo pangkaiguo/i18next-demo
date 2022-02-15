@@ -69,4 +69,4 @@ const initReactI18n = () => {
     });
 };
 
-export default initReactI18n;
+export { initReactI18n };
