@@ -84,3 +84,22 @@ t('国际化 i18next {{0}}{{1}}{{2}}', { 0: context, 1: '100%', 2: 100 })
   </a> route.
 </Trans>
 ```
+
+## Scripts
+
+```scripts
+// config following scripts in package.json
+"i18n:scanner": "i18next-scanner --config src/locale/config.js 'src/**/*.{js,jsx}'",
+"i18n:json2po": "i18next-conv -l en -s src/locale/en.json -t src/locale/en.po",
+"i18n:po2json": "i18next-conv -l en -s src/locale/en.po -t src/locale/en.json"
+
+// scan all international keys to json file with i18next-scanner 
+yarn i18n:scanner
+
+// convert json file into po file with i18next-conv.
+yarn i18n:json2po
+
+// convert po file into json file with i18next-conv.
+yarn i18n:po2json
+
+```
