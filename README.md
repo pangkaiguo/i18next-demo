@@ -55,10 +55,10 @@ t('国际化 i18next {{0}}{{1}}{{2}}', { 0: context, 1: '100%', 2: 100 })
 // Trans Component HOC https://github.com/i18next/react-i18next-gitbook/blob/master/latest/trans-component.md
 
 // Trans eg.1: 
-// json: "你好 <1>{{name}}</1>, 你有 {{count}} 条未读信息. <5>前往查看</5>.": "你好 <1><0>{{name}}</0></1>, 你有 <3>{{context}}</3> 条未读信息. <5>前往查看</5>."
-// result: 你好 kai guo, 你有 2 条未读信息. 前往查看.
-<Trans i18nKey="你好 <1>{{name}}</1>, 你有 {{count}} 条未读信息. <5>前往查看</5>." count={context * 100}>
-  你好 <strong>{{ name }}</strong>, 你有 {{ context }} 条未读信息. <span>前往查看</span>.
+// json: "你好 <strong>{{ name }}</strong>, 你有 {{ context }} 条未读信息. <a href=\"http://baidu.com\">前往查看</a>": "你好 <1><0>{{name}}</0></1>, 你有 <3>{{context}}</3> 条未读信息. <5>前往查看</5>.",
+// result: 你好 kai guo, 你有 1.00 条未读信息. 前往查看.
+<Trans i18nKey='你好 <strong>{{ name }}</strong>, 你有 {{ context }} 条未读信息. <a href="http://baidu.com">前往查看</a>' count={context * 100}>
+  你好 <strong>{{ name }}</strong>, 你有 {{ context }} 条未读信息. <a href="http://baidu.com">前往查看</a>.
 </Trans>
 
 // Trans eg.2

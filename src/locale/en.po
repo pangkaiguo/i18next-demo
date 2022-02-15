@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: i18next-conv\n"
+"mime-version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"POT-Creation-Date: 2022-02-15T09:36:58.714Z\n"
+"PO-Revision-Date: 2022-02-15T09:36:58.714Z\n"
+"Language: en\n"
+
+msgid "国际化 i18next {{0}}{{1}}{{2}}"
+msgstr "国际化 i18next {{0}}{{1}}{{2}}"
+
+msgid "检查状态: {{0}}"
+msgstr "检查状态: {{0}}"
+
+msgid "健康"
+msgstr "健康"
+
+msgid "My text that can be <b>{{boldPlaceholder}}</b>"
+msgstr "My text that can be <1><0>{{boldPlaceholder}}</0></1>"
+
+msgid "myLangText"
+msgstr "Please click <1>Key</1> for further information."
+
+msgid ""
+"Object with ID <strong>Num.12</strong> is of unknown type.Go back to <a "
+"href=\"/objects\" onClick={() => alert(0)}>Objects</a> route."
+msgstr ""
+"Object with ID <1>Num.12</1> is of unknown type. Go back to <3>Objects</3> "
+"route."
+
+msgid ""
+"你好 <strong>{{ name }}</strong>, 你有 {{ context }} 条未读信息. <a "
+"href=\"http://baidu.com\">前往查看</a>"
+msgstr "你好 <1><0>{{name}}</0></1>, 你有 <3>{{context}}</3> 条未读信息. <5>前往查看</5>."
+
+msgid "你好 <italic>美丽的</italic> <bold>{{what}}</bold><btn>{{enter}}</btn>"
+msgstr "你好 <italic>美丽的</italic> <bold>{{what}}</bold><btn>{{enter}}</btn>"
+
+msgid "hello <0>{{what}}</0> <1>{{enter}}</1>"
+msgstr "hello <0>{{what}}</0> <1>{{enter}}</1>"
+
+msgctxt "blank\" rel=\"noopener noreferrer\" >Learn React</a>访问链接"
+msgid "测试标签<a className=\"App-link\" href=\"https://reactjs.org\" target=\""
+msgstr "测试标签<1>Learn React</1>访问链接"
