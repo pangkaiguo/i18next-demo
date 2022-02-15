@@ -1,72 +1,77 @@
 import logo from './logo.svg';
 import './App.css';
-import store from 'store';
-import i18n from "i18next";
-import { useTranslation, initReactI18next } from "react-i18next";
-import en from './locale/en.json';
-import zh from './locale/zh.json';
+import { Trans, useTranslation } from "react-i18next";
+import initReactI18n from './locale';
 
-const currentLocale = store.get('LOCALE') || navigator.language || navigator.browserLanguage || navigator.userLanguage || 'zh-CN';
-const browserLanguage = currentLocale.split('-')[0];
+initReactI18n();
 
-i18n
-  // import LanguageDetector from 'i18next-browser-languagedetector';
-  // .use(LanguageDetector) // get current browser default language
-  .use(initReactI18next)
-  .init({
-    // the translations
-    // (tip move them in a JSON file and import them,
-    // or even better, manage them via a UI: https://react.i18next.com/guides/multiple-translation-files#manage-your-translations-with-a-management-gui)
-    resources: {
-      [browserLanguage]: {
-        translation: browserLanguage === 'en' ? en : zh,
-      }
-    },
-    lng: browserLanguage, // if you're using a language detector, do not define the lng option
-    fallbackLng: browserLanguage,
-    debug: false,
-    interpolation: {
-      escapeValue: false // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
-    },
-    react: {
-      hashTransKey: function (defaultValue) {
-        // return a key based on defaultValue or if you prefer to just remind you should set a key return false and throw an error
-      },
-      defaultTransParent: 'div', // a valid react element - required before react 16
-      // https://react.i18next.com/latest/trans-component#trans-props
-      transEmptyNodeValue: '', // what to return for empty Trans
-      transSupportBasicHtmlNodes: true, // allow <br/> and simple html elements in translations
-      transKeepBasicHtmlNodesFor: ['a', 'img', 'span'], // don't convert to <1></1> if simple react elements
-      // Wrap text nodes in a user-specified element.
-      // i.e. set it to 'span'. By default, text nodes are not wrapped.
-      // Can be used to work around a well-known Google Translate issue with React apps. See: https://github.com/facebook/react/issues/11538
-      // (v11.10.0)
-      transWrapTextNodes: '',
-    }
-  });
 function App() {
   const { t } = useTranslation();
+
   const context = Math.random().toFixed(2);
+  const name = "kai guo";
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <div>{t('国际化 i18next {{0}}{{1}}{{2}}', { 0: context, 1: '100%', 2: 100 })}</div>
-        <div>{
-          t('测试标签 {{img}} {{a}} {{span}}', {
-            img: <img src={logo} className="App-logo" alt="logo" />, 'a': <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>, span: <span>transWrapTextNodes</span>
-          })}
+        <div className="App-i18next">
+          <h1>======react-i18next======</h1>
+          <ol>
+            <li>
+              {t('国际化 i18next {{0}}{{1}}{{2}}', { 0: context, 1: '100%', 2: 100 })}
+            </li>
+            <li>
+              <Trans i18nKey="My text that can be <b>{{boldPlaceholder}}</b>">My text that can be <b>{{ boldPlaceholder: 'Bold' }}</b></Trans>
+            </li>
+            <li>
+              <Trans i18nKey={`测试标签<a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer" >Learn React</a>访问链接`}>
+                测试标签<a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer" >Learn React</a>访问链接
+              </Trans>
+            </li>
+            <li>
+              {t('检查状态: {{0}}', { 0: t('健康') })}
+            </li>
+            <li>
+              <Trans i18nKey="myLangText">
+                Please click <a href="baidu.com">Key</a> for further information.
+              </Trans>
+            </li>
+            <li>
+              <Trans i18nKey='Object with ID <strong>Num.12</strong> is of unknown type.Go back to <a href="/objects" onClick={() => alert(0)}>Objects</a> route.'>
+                Object with ID <strong>Num.12</strong> is of unknown type.
+                Go back to <a
+                  href="/objects"
+                  onClick={() => alert(0)}
+                >
+                  Objects
+                </a> route.
+              </Trans>
+            </li>
+            <li>
+              <Trans i18nKey="你好 <1>{{name}}</1>, 你有 {{count}} 条未读信息. <5>前往查看</5>." count={context * 100}>
+                你好 <strong>{{ name }}</strong>, 你有 {{ context }} 条未读信息. <span>前往查看</span>.
+              </Trans>
+            </li>
+            <li>
+              <Trans
+                i18nKey="你好 <italic>美丽的</italic> <bold>{{what}}</bold><btn>{{enter}}</btn>" // optional -> fallbacks to defaults if not provided
+                defaults="你好 <italic>美丽的</italic> <bold>{{what}}</bold><btn>{{enter}}</btn>" // optional defaultValue
+                values={{ what: '世界', enter: '进入' }}
+                components={{ italic: <i />, bold: <strong />, btn: <button /> }}
+              />
+            </li>
+            <li>
+              <Trans
+                i18nKey="hello <0>{{what}}</0> <1>{{enter}}</1>" // optional -> fallbacks to defaults if not provided
+                defaults="hello <0>{{what}}</0> <1>{{enter}}</1>" // optional defaultValue
+                values={{ what: 'world', enter: 'wonderful！' }}
+                components={[<strong></strong>, <a href="https://reactjs.org"> </a>]}
+              />
+            </li>
+          </ol>
         </div>
-        <div>{t('检查状态: {{0}}', { 0: t('健康') })}</div>
       </header>
-    </div>
+    </div >
   );
 }
 

@@ -1,6 +1,12 @@
 {
-  "国际化 i18next {{0}}{{1}}{{2}}": "Translation i18next {{0}}{{1}}{{2}}",
-  "测试标签 {{img}} {{a}} {{span}}": "Test tags {{img}} {{a}} {{span}}",
-  "检查状态: {{0}}": "Check Status: {{0}}",
-  "健康": "Health"
+  "国际化 i18next {{0}}{{1}}{{2}}": "国际化 i18next {{0}}{{1}}{{2}}",
+  "检查状态: {{0}}": "检查状态: {{0}}",
+  "健康": "健康",
+  "My text that can be <b>{{boldPlaceholder}}</b>": "My text that can be <1><0>{{boldPlaceholder}}</0></1>",
+  "测试标签<a className=\"App-link\" href=\"https://reactjs.org\" target=\"_blank\" rel=\"noopener noreferrer\" >Learn React</a>访问链接": "测试标签<1>Learn React</1>访问链接",
+  "myLangText": "Please click <1>Key</1> for further information.",
+  "Object with ID <strong>Num.12</strong> is of unknown type.Go back to <a href=\"/objects\" onClick={() => alert(0)}>Objects</a> route.": "Object with ID <1>Num.12</1> is of unknown type. Go back to <3>Objects</3> route.",
+  "你好 <1>{{name}}</1>, 你有 {{count}} 条未读信息. <5>前往查看</5>.": "你好 <1><0>{{name}}</0></1>, 你有 <3>{{context}}</3> 条未读信息. <5>前往查看</5>.",
+  "你好 <italic>美丽的</italic> <bold>{{what}}</bold><btn>{{enter}}</btn>": "你好 <italic>美丽的</italic> <bold>{{what}}</bold><btn>{{enter}}</btn>",
+  "hello <0>{{what}}</0> <1>{{enter}}</1>": "hello <0>{{what}}</0> <1>{{enter}}</1>"
 }
