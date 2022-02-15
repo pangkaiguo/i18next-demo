@@ -14,6 +14,9 @@
 ## Basic Dependencies
 
 ``` dependencies
+// install dependencies
+yarn add i18next react-i18next i18next-conv i18next-scanner
+
 // dependencies
 "dependencies": {
     "i18next": "^21.6.7",
