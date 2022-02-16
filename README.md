@@ -86,6 +86,40 @@ t('国际化 i18next {{0}}{{1}}{{2}}', { 0: context, 1: '100%', 2: 100 })
     Objects
   </a> route.
 </Trans>
+
+// How to analyze duplicate keys. See the configurations for help:`contextSeparator` and `pluralSeparator` in https://www.i18next.com/overview/configuration-options#others
+// 默认通过最后一个 `_` 下划线来标识和区分一些可能重复的关键字
+// 翻译的时候需要注意 po 文件的分割方式， 下划线会把原有完整的一个词条分割掉，msgid 会不完整，得结合 msgctxt，但是如例子中的`本地用户`是故意为之的-msgid是正确的。
+// keys in json file :
+"本地用户_navigation": "Local User"
+
+"请输入合法的服务名称。支持 1 ~ 80 个字符，中文、大小写字母、数字、下划线（_）、连字符（-）和句点（.）": "Please enter a legal service name. Support 1 ~ 80 characters, Chinese, uppercase and lowercase letters, numbers, underscores(_), hyphens(-) and periods(.)",
+
+"配置二级菜单需要先配置一级菜单，否则二级菜单无法生效。配置规则为：title_一级菜单下标_二级菜单下标，path_一级菜单路由下标_二级菜单路由下标。配置样例：": "To configure the second-level menu, you need to configure the first-level menu first, otherwise the second-level menu will not take effect. The configuration rules are: title_first-level menu subscript_second-level menu subscript, path_first-level menu routing subscript_second-level menu routing subscript. Configuration example:",
+// keys in po file:
+/* 故意为之的词条分割（navigation加上是为了标识菜单使用的词条，防止重复） */
+msgctxt "navigation"
+msgid "本地用户"
+msgstr "Local User"
+
+/* 完整词条被分割掉 */
+msgctxt "）、连字符（-）和句点（.）"
+msgid "请输入合法的服务名称。支持 1 ~ 80 个字符，中文、大小写字母、数字、下划线（"
+msgstr ""
+"Please enter a legal service name. Support 1 ~ 80 characters, Chinese, "
+"uppercase and lowercase letters, numbers, underscores(_), hyphens(-) and "
+"periods(.)"
+
+/* 最后一个下划线分割 */
+msgctxt "二级菜单路由下标。配置样例："
+msgid "配置二级菜单需要先配置一级菜单，否则二级菜单无法生效。配置规则为：title_一级菜单下标_二级菜单下标，path_一级菜单路由下标"
+msgstr ""
+"To configure the second-level menu, you need to configure the first-level "
+"menu first, otherwise the second-level menu will not take effect. The "
+"configuration rules are: title_first-level menu subscript_second-level menu "
+"subscript, path_first-level menu routing subscript_second-level menu "
+"routing subscript. Configuration example:"
+
 ```
 
 ## Scripts
