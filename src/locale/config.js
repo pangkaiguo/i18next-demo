@@ -13,7 +13,7 @@ module.exports = {
   ],
   output: './',
   options: {
-    debug: true,
+    debug: false,
     func: {
       list: ['i18next.t', 'i18n.t', 't'],
       extensions: ['.js', '.jsx', '.ts', '.tsx']
