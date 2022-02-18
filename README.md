@@ -173,4 +173,4 @@
 
 ## Issues
 
-- 扫描 .tsx 中的 Trans 标签，词条无法正常扫出来
+- 扫描 .tsx 中的 Trans 标签无法正常解析的问题[Unable to parse Trans component](https://github.com/i18next/i18next-scanner/issues/189)

@@ -22,8 +22,7 @@ module.exports = {
       component: 'Trans',
       i18nKey: 'i18nKey',
       defaultsKey: 'defaults',
-      // don't pass ts or tsx here!
-      extensions: ['.js', '.jsx'],
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
       fallbackKey: function (ns, value) {
         return value;
       },
