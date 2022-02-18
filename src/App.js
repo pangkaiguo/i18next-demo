@@ -17,7 +17,13 @@ function App() {
           <h1>======react-i18next======</h1>
           <ol>
             <li>
-              {t('国际化 i18next {{0}}{{1}}{{2}}', { 0: context, 1: '100%', 2: 100 })}
+              {t('国际化 i18next {{0}}{{1}}{{2}}%%', { 0: context, 1: '100%', 2: 100 })}
+            </li>
+            <li>
+              {t('遍历 {{args, list}}', { args: ['a', 'b', 'c', 'e', 1, 2] })}
+            </li>
+            <li>
+              {t('遍历 {{args, list}}', { args: ['a', 'b', 'c'] })}
             </li>
             <li>
               <Trans i18nKey="My text that can be <b>{{boldPlaceholder}}</b>">My text that can be <b>{{ boldPlaceholder: 'Bold' }}</b></Trans>

@@ -15,7 +15,7 @@
 
 - dependencies
 
-  ``` dependencies
+  ```sh
   // install dependencies
   yarn add i18next react-i18next i18next-conv i18next-scanner
 
@@ -42,7 +42,7 @@
   - "i18n:json2po": "i18next-conv -l en -s src/locale/en.json -t src/locale/en.po --ctxSeparator _::_",
   - "i18n:po2json": "i18next-conv -l en -s src/locale/en.po -t src/locale/en.json --ctxSeparator _::_",
 
-    ```options
+    ```bash
     program
       .version(i18nextConv.version)
       .option('-b, --base [path]', 'Specify path for the base language file. only take effect with -K option', '')
@@ -93,16 +93,27 @@
 
 - // Simple
 
-  ```simple
+  ```javascript
   // json: "国际化 i18next {{0}}{{1}}{{2}}": "国际化 i18next {{0}}{{1}}{{2}}"
-
   // result: 国际化 i18next 0.25100%100
   t('国际化 i18next {{0}}{{1}}{{2}}', { 0: context, 1: '100%', 2: 100 })
   ```
 
+- // List
+
+  ```javascript
+  // json: "遍历 {{args, list}}": "遍历 {{args, list}}",
+  // result: 
+  // 混合数据类型：遍历 a,b,c,e,1,2; 
+  // 相同数据类型：遍历 a, b, and c
+  t('遍历 {{args, list}}', { args: ['a', 'b', 'c', 'e', 1, 2] })
+  t('遍历 {{args, list}}', { args: ['a', 'b', 'c'] })
+  </li>
+  ````
+
 - // Trans
 
-  ```Trans
+  ```javascript
   // Trans Component HOC https://github.com/i18next/react-i18next-gitbook/blob/master/latest/trans-component.md
 
   // Trans eg.1: 
@@ -140,7 +151,7 @@
   - 默认通过最后一个 `_` 下划线来标识和区分一些可能重复的关键字，因此需要再翻译脚本参数中配置参数 --ctxSeparator 规则，我们这里把它改为 ”_::_“(默认的下划线太容易重复了)，因此翻译的 keys 中针对 ”_::_“之后的相关词汇不需要翻译
   - // keys in json file :
   
-    ``` keys in json file
+    ```json
     "本地用户_::_navigation": "Local User"
 
     "请输入合法的服务名称。支持 1 ~ 80 个字符，中文、大小写字母、数字、下划线（_）、连字符（-）和句点（.）": "Please enter a legal service name. Support 1 ~ 80 characters, Chinese, uppercase and lowercase letters, numbers, underscores(_), hyphens(-) and periods(.)",
@@ -148,7 +159,7 @@
 
   - // keys in po file:
 
-    ``` keys in po file
+    ```json
     msgctxt "navigation"
     msgid "本地用户"
     msgstr "Local User"
