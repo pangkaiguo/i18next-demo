@@ -1,6 +1,7 @@
 // https://github.com/i18next/i18next-scanner
 const fs = require('fs');
 const chalk = require('chalk');
+const typescriptTransform = require('i18next-scanner-typescript');
 
 module.exports = {
   input: [
@@ -21,7 +22,8 @@ module.exports = {
       component: 'Trans',
       i18nKey: 'i18nKey',
       defaultsKey: 'defaults',
-      extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      // don't pass ts or tsx here!
+      extensions: ['.js', '.jsx'],
       fallbackKey: function (ns, value) {
         return value;
       },
@@ -29,7 +31,16 @@ module.exports = {
         ecmaVersion: 2020,
         sourceType: 'module', // defaults to 'module'
         // Check out https://github.com/acornjs/acorn/tree/master/acorn#interface for additional options
-      }
+      },
+      // https://github.com/nucleartux/i18next-scanner-typescript
+      transform: typescriptTransform({
+        // default value for extensions
+        extensions: ['.ts', '.tsx'],
+        // optional ts configuration
+        tsOptions: {
+          target: 'es2020',
+        },
+      }),
     },
     lngs: ['en'],
     ns: [

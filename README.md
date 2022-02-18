@@ -8,6 +8,7 @@
 - i18next
 - react-i18next
 - i18next-scanner
+- i18next-scanner-typescript
 - i18next-conv
 - private extend plugins for i18next...
 
@@ -24,11 +25,9 @@
       "i18next": "^21.6.7",
       "i18next-conv": "^11.0.3",
       "react-i18next": "^11.15.3",
+      "i18next-scanner": "^3.1.0",
+      "i18next-scanner-typescript": "^1.0.6",
     },
-  // devdependencies
-  "devDependencies": {
-      "i18next-scanner": "^3.1.0"
-    }
   ```
 
 - [Use i18next-scanner to export or scanner keys.](https://github.com/i18next/i18next-scanner)
