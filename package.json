@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "i18n:scanner": "i18next-scanner --config src/locale/config.js 'src/**/*.{js,jsx}'",
+    "i18n:scanner": "i18next-scanner --config src/locale/config.js 'src/**/*.{js,jsx,ts,tsx}'",
     "i18n:json2po": "i18next-conv -l en -s src/locale/en.json -t src/locale/en.po --ctxSeparator _::_",
     "i18n:po2json": "i18next-conv -l en -s src/locale/en.po -t src/locale/en.json --ctxSeparator _::_"
   },
