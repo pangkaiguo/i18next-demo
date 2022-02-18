@@ -148,7 +148,7 @@
   ```
 
 - // How to analyze duplicate keys. See the configurations for help:`contextSeparator` and `pluralSeparator` in <https://www.i18next.com/overview/configuration-options#others>
-  - 默认通过最后一个 `_` 下划线来标识和区分一些可能重复的关键字，因此需要再翻译脚本参数中配置参数 --ctxSeparator 规则，我们这里把它改为 ”_::_“(默认的下划线太容易重复了)，因此翻译的 keys 中针对 ”_::_“之后的相关词汇不需要翻译
+  - 默认通过最后一个 `_` 下划线来标识和区分一些可能重复的关键字，因此需要再翻译脚本参数中配置参数 `--ctxSeparator` 规则，我们这里把它改为 `_::_` (默认的下划线太容易重复了)，因此翻译的 keys 中针对 `_::_` 之后的相关词汇不需要翻译
   - // keys in json file :
   
     ```json
