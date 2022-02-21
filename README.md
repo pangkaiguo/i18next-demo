@@ -26,7 +26,6 @@
       "i18next-conv": "^11.0.3",
       "react-i18next": "^11.15.3",
       "i18next-scanner": "^3.1.0",
-      "i18next-scanner-typescript": "^1.0.6",
     },
   ```
 
@@ -37,7 +36,7 @@
 ## Scripts
 
 - // config following scripts in package.json
-  - "i18n:scanner": "i18next-scanner --config src/locale/config.js 'src/**/*.{js,jsx}'",
+  - "i18n:scanner": "i18next-scanner --config src/locale/config.js 'src/**/*.{js,jsx,ts,tsx}'",
   - "i18n:json2po": "i18next-conv -l en -s src/locale/en.json -t src/locale/en.po --ctxSeparator _::_",
   - "i18n:po2json": "i18next-conv -l en -s src/locale/en.po -t src/locale/en.json --ctxSeparator _::_",
 

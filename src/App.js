@@ -53,7 +53,7 @@ function App() {
               </Trans>
             </li>
             <li>
-              <Trans i18nKey='你好 <strong>{{ name }}</strong>, 你有 {{ context }} 条未读信息. <a href="http://baidu.com">前往查看</a>' count={context * 100}>
+              <Trans i18nKey='你好' count={context * 100}>
                 你好 <strong>{{ name }}</strong>, 你有 {{ context }} 条未读信息. <a href="http://baidu.com">前往查看</a>.
               </Trans>
             </li>
