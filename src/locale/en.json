@@ -8,7 +8,6 @@
   "myLangText": "Please click <1>Key</1> for further information.",
   "Object with ID <strong>Num.12</strong> is of unknown type.Go back to <a href=\"/objects\" onClick={() => alert(0)}>Objects</a> route.": "Object with ID <1>Num.12</1> is of unknown type. Go back to <3>Objects</3> route.",
   "你好 <strong>{{ name }}</strong>, 你有 {{ context }} 条未读信息. <a href=\"http://baidu.com\">前往查看</a>": "你好 <1><0>{{name}}</0></1>, 你有 <3>{{context}}</3> 条未读信息. <5>前往查看</5>.",
-  "你好 <italic>美丽的</italic> <bold>{{what}}</bold><btn>{{enter}}</btn>": "你好 <italic>美丽的</italic> <bold>{{what}}</bold><btn>{{enter}}</btn>",
   "hello <0>{{what}}</0> <1>{{enter}}</1>": "hello <0>{{what}}</0> <1>{{enter}}</1>",
   "你好": "你好 <1><0>{{name}}</0></1>, 你有 <3>{{context}}</3> 条未读信息. <5>前往查看</5>."
 }

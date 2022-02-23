@@ -72,6 +72,10 @@
 
 - // convert po file into json file with i18next-conv.
   - yarn i18n:po2json
+  
+- [Important] When you need to run i18next-conv, use node 12+ pls. (node 12 does not support fs/promises)
+  - nvm use 17.1
+  - yarn i18n:po2json
 
 ## Other Configerations
 
@@ -173,3 +177,5 @@
 ## Issues
 
 - 扫描 .tsx 中的 Trans 标签无法正常解析的问题[Unable to parse Trans component](https://github.com/i18next/i18next-scanner/issues/189)
+- [Unable to parse Trans component with the content](https://github.com/i18next/i18next-scanner/issues/130)
+- [<Trans> component in Typescript files is no longer parsed](https://github.com/i18next/i18next-scanner/issues/88)
