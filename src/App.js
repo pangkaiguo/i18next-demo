@@ -15,6 +15,23 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <div className="App-i18next">
           <h1>======react-i18next======</h1>
+          <ul><li>问题修复</li>
+          <li>块存储修复纳管开源 Ceph 集群 O 版本，不兼容 MON 连接信息的问题</li>
+          <li>文件存储修复 NFS 共享的子目录路径无法挂载的问题</li>
+          <li>文件存储修复 NFS 共享不能通过长路径（/dfs/DistributedFileSystem/[share]）进行挂载的问题</li>
+          <li>文件存储修复 NFS 协议写入的文件，通过 FTP 协议无权限进行操作的问题</li>
+          <li>文件存储修复 NFS 协议在较大目录情况下 readdir 可能返回信息不足的问题</li>
+          <li>对象存储修复多站点切换时，由于配置重新加载使得服务重启导致切换失败的问题</li>
+          <li>对象存储修复分段上传完成时，body 不能超过 1MB 大小的问题</li></ul>
+
+功能变化
+XSpeed 存储池支持数据层修改 PG 分裂，缓存层不支持修改 PG 分裂，具体执行步骤参考 KB
+
+块存储支持纳管卷的 QoS 设置，通过兼容 rbd config key 命令支持：rbd_qos_iops_limit、rbd_qos_bps_limit、rbd_qos_iops_burst、rbd_qos_bps_burst
+
+块存储通过 Web UI 设置卷 QoS 会同样应用于 RBD 协议
+
+文件存储废弃 SMB 回收站功能，后续使用 5.2 引入的文件目录统一回收站功能
           <ol>
             <li>
               {t('国际化 i18next {{0}}{{1}}{{2}}%%', { 0: context, 1: '100%', 2: 100 })}
